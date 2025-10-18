@@ -4,6 +4,5 @@
 
 */
 
-
 console.log("This is my first javaScript code ");
 console.log("Welcome to my Repository");
