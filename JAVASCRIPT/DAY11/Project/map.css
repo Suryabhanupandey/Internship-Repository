@@ -1,0 +1,107 @@
+ 
+    /* 🌈 Basic Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #6dd5ed, #2193b0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    /* 🛍️ Cart Container */
+    .cart {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+      transition: 0.3s ease;
+    }
+
+    .cart:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    /* 📦 Item List */
+    ul {
+      list-style: none;
+      margin-bottom: 15px;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f8f9fa;
+      margin: 8px 0;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-size: 1rem;
+      color: #444;
+    }
+
+    /* 💰 Total Section */
+    #total {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    /* 🧠 Buttons */
+    .btn {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      flex: 1;
+      background-color: #2196f3;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1769aa;
+    }
+
+    /* 📱 Responsive Design */
+    @media (max-width: 480px) {
+      .cart {
+        padding: 20px;
+        max-width: 95%;
+      }
+
+      li {
+        font-size: 0.9rem;
+      }
+
+      button {
+        font-size: 0.9rem;
+        padding: 8px;
+      }
+    }
+  
