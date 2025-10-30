@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart To-Do List</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .todo-container {
+      background: white;
+      width: 350px;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .input-group input {
+      width: 75%;
+      padding: 10px;
+      border: 2px solid #764ba2;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    .input-group button {
+      width: 22%;
+      border: none;
+      background: #764ba2;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .input-group button:hover {
+      background: #5a3b8d;
+    }
+
+    ul {
+      list-style: none;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    li {
+      background: #f5f5f5;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.3s;
+    }
+
+    li.completed {
+      text-decoration: line-through;
+      color: gray;
+      background: #e0e0e0;
+    }
+
+    li button {
+      border: none;
+      background: crimson;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+
+    li button:hover {
+      background: darkred;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="todo-container">
+    <h2>📝 Smart To-Do List</h2>
+
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Enter new task...">
+      <button onclick="addTask()">Add</button>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script>
+    const taskInput = document.getElementById('taskInput');
+    const taskList = document.getElementById('taskList');
+
+    // Load saved tasks
+    document.addEventListener('DOMContentLoaded', loadTasks);
+
+    function addTask() {
+      const task = taskInput.value.trim();
+      if (task === '') return alert('Please enter a task!');
+      
+      createTaskElement(task);
+      saveTask(task);
+      taskInput.value = '';
+    }
+
+    function createTaskElement(task) {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <span onclick="toggleComplete(this)">${task}</span>
+        <button onclick="deleteTask(this)">Delete</button>
+      `;
+      taskList.appendChild(li);
+    }
+
+    function toggleComplete(element) {
+      element.parentElement.classList.toggle('completed');
+    }
+
+    function deleteTask(button) {
+      const li = button.parentElement;
+      removeTask(li.firstChild.textContent);
+      li.remove();
+    }
+
+    // Local Storage Handling
+    function saveTask(task) {
+      let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+      tasks.push(task);
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+    }
+
+    function loadTasks() {
+      const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+      tasks.forEach(task => createTaskElement(task));
+    }
+
+    function removeTask(taskToRemove) {
+      let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+      tasks = tasks.filter(task => task !== taskToRemove);
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+    }
+  </script>
+
+</body>
+</html>
