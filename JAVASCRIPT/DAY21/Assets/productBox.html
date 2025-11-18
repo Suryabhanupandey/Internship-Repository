@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Box</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./bootstrap/CSS/bootstrap.css">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <h1 class="header-title">Ecommerce Cart Project</h1>
+    </div>
+
+    <section class="product-section">
+        <div class="container-fluid product-container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <!-- Product 1 -->
+                        <div class="col-lg-4">
+                            <div class="card product-card">
+                                <div class="product-img-box">
+                                    <img src="./image/image.png" class="product-img" alt="Laptop">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="product-name">Laptop X1</h5>
+                                    <p class="product-desc">Powerful performance, sharp display.</p>
+                                    <p class="product-price">Price: 50000 Rs.</p>
+                                    <button class="btn-add addtocart-btn" data-id="1">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="col-lg-4">
+                            <div class="card product-card">
+                                <div class="product-img-box">
+                                    <img src="./image/image (1).png" class="product-img" alt="Watch">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="product-name">Smart Watch X1</h5>
+                                    <p class="product-desc">Stylish design, smart features.</p>
+                                    <p class="product-price">Price: 8000 Rs.</p>
+                                    <button class="btn-add addtocart-btn" data-id="2">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="col-lg-4">
+                            <div class="card product-card">
+                                <div class="product-img-box">
+                                    <img src="./image/image (2).png" class="product-img" alt="Watch">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="product-name">Premium Watch S9</h5>
+                                    <p class="product-desc">Elegant look, everyday wear.</p>
+                                    <p class="product-price">Price: 1000 Rs.</p>
+                                    <button class="btn-add addtocart-btn" data-id="3">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cart -->
+                <div class="col-lg-4">
+                    <div class="cart-box">
+                        <div class="cart-header">
+                            <span>My Cart</span>
+                            <span>Items: <span class="cart-count">0</span></span>
+                            <span>Total: <span class="total-price">0</span></span>
+                        </div>
+
+                        <ul class="cart-items product-result">
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+    <script src="./bootstrap/JS/bootstrap.js"></script>
+</body>
+
+</html>
