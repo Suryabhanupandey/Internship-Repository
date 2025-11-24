@@ -1,0 +1,40 @@
+body {
+  background: #f4f4f4;
+}
+
+/* Cart Button */
+.cart-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+}
+
+/* Cart Panel */
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 300px;
+  height: 100%;
+  background: #ffffff;
+  padding: 20px;
+  transition: 0.3s;
+  overflow-y: auto;
+  z-index: 3000;
+}
+
+.cart-panel.open {
+  right: 0;
+}
+
+/* Product Card Hover */
+.product-card {
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+ 
