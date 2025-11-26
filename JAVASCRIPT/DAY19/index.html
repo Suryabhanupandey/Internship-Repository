@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="info-container">
+            <img height="50" src="./image/github-logo.png" alt="logo">
+            <h1>GitHub</h1>
+            
+                <input id="username" type="text" placeholder="GitHub username " />
+                <button id="searchBtn">Search</button>
+        
+            <div class="fetch-info">
+                <h4>Personal Info</h4>
+                <ul>
+                    <li><b>Name: </b><span id="name"></span></li>
+                    <li><b>Follower: </b><span id="follower"></span></li>
+                    <li><b>Repository: </b><span id="repo"></span></li>
+                    <li><b>Following: </b><span id="following"></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js  "></script>
+</body>
+
+</html>
