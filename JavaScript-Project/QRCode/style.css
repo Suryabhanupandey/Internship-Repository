@@ -1,0 +1,73 @@
+/* Reset and basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main container styling */
+.main-container {
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+/* QR Container */
+.qrcontainer input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #2a5298;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.qrcontainer input:focus {
+  border-color: #1e3c72;
+  box-shadow: 0 0 8px rgba(30, 60, 114, 0.3);
+}
+
+/* Button styling */
+#GenerateQr {
+  background-color: #2a5298;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: all 0.3s ease;
+}
+
+#GenerateQr:hover {
+  background-color: #1e3c72;
+  transform: scale(1.05);
+}
+
+/* Result container */
+.displayResult {
+  margin-top: 20px;
+}
+
+.displayResult img {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #2a5298;
+  border-radius: 10px;
+  padding: 10px;
+}
