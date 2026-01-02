@@ -1,10 +1,32 @@
-# Projects
+# 🚀 Projects
 
-##### Technologies used 
+A collection of frontend projects built using core web technologies.
 
-1. HTML
-2. CSS and 
-3. **JavaScript**
+---
 
-Links to Preview Projects : 
-QRCodeGenrater Website :- [QRCodeGenrater](https://qrcodegenraater.netlify.app/)
+## 🧰 Technologies Used
+- **HTML**
+- **CSS**
+- **JavaScript**
+
+---
+
+## 🔗 Live Project Preview
+
+### 🔳 QR Code Generator Website
+A simple and user-friendly web application to generate QR codes instantly.
+
+👉 **Live Demo:**  
+https://qrcodegenraater.netlify.app/
+
+---
+
+## ✨ Features
+- Instant QR code generation  
+- Clean and responsive UI  
+- Easy to use  
+- Deployed on Netlify  
+
+---
+
+⭐ *If you like this project, don’t forget to star the repository!*
