@@ -6,19 +6,13 @@ class room
 	{
 		int temp =num;
 		int reverse =0;
+		while()
        		{
-			int rem = temp.10;
+			int rem = temp%10;
 			reverse = reverse*10+reverse;
 			temp = temp/10
 		}
-	if(reverse =num)
-		{
-			return true;
-	
-		}else
-		{
-			return false;
-		}
+	 
 	
 	}
 

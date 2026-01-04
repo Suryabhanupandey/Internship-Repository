@@ -2,7 +2,7 @@ import java.util.*;
 
 class Room {
 
-    boolean isNaiway(int num)  // Method to check palindrome
+    boolean isNaiway(int num) 
     {
         int temp = num;
         int reverse = 0;
@@ -14,7 +14,7 @@ class Room {
             temp = temp / 10;
         }
 
-        return reverse == num;  // True or False
+        return reverse == num; 
     }
 }
 

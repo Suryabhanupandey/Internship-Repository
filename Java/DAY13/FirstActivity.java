@@ -7,10 +7,13 @@ class Room{
 
 				System.out.println("Room ....");
 			}
+
 			static
+
 			{
 
 			System.out.println("Static Initialization block Executed");
+
 			}
 
 
