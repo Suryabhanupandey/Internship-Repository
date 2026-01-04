@@ -4,7 +4,7 @@ public class FirstActivity{
 
 		{
 
-				String[]countries = {"India","ShreeLanka","china","England"};
+				String[] countries = {"India","ShreeLanka","china","England"};
 			for(int i=0;i<countries.length;i++)
 				{
 					System.out.println(i+"---->"+countries[i]);

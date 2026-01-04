@@ -4,10 +4,10 @@ public class ThirdActivity{
 				{
 					int value = Integer.parseInt(args[0]);
 
-if(value % 2 == 0){
+			if(value % 2 == 0){
 
 					System.out.println(value + " is Even");
-}
+				}
 
 
 				}
