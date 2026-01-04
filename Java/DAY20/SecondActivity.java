@@ -11,29 +11,25 @@ class CheckNumber extends NumberCheck
 {
     public boolean isNiven(int num)
     {
-        int temp = Math.abs(num);
-        int sum = 0;
+        int temp = num;
+        int reverse = 0;
 
         while (temp > 0)
         {
-            sum += temp % 10;
+            int rem = temp % 10;
+            reverse= reverse*10 + rem;
             temp = temp / 10;
         }
 
-        return (sum != 0 && num % sum == 0);
+        return (reverse != 0 && num % reverse == 0);
     }
 
     public boolean isPrime(int num)
     {
         if (num <= 1)
             return false;
-        if (num == 2)
-            return true;
-        if (num % 2 == 0)
-            return false;
 
-        int limit = (int)Math.sqrt(num);
-        for (int i = 3; i <= limit; i += 2)
+        for (int i = 2; i <= num / 2; i++)
         {
             if (num % i == 0)
                 return false;
@@ -49,7 +45,6 @@ public class SecondActivity
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number: ");
         int num = sc.nextInt();
-        sc.close();
 
         NumberCheck obj = new CheckNumber();
 
