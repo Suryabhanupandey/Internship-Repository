@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #87ceeb, #e0f7fa);
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.game-wrapper {
+  text-align: center;
+}
+
+.title {
+  font-size: 2.8rem;
+  color: #222;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.instructions {
+  color: #333;
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+canvas {
+  background: url("https://i.ibb.co/3FCkh6Y/flappy-bg.png") center/cover no-repeat;
+  border: 4px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.scoreboard {
+  margin-top: 12px;
+  font-size: 1.5rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  display: inline-block;
+  padding: 8px 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
