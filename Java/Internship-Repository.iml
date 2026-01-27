@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/DAY1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY10" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY11" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY12" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY13" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY14" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY15" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY16" isTestSource="false" packagePrefix="com.app" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY17" isTestSource="false" packagePrefix="com.app" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY18" isTestSource="false" packagePrefix="com.app" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY19" isTestSource="false" packagePrefix="com.app" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY20" isTestSource="false" packagePrefix="Com.app" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY21" isTestSource="false" packagePrefix="com.app" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY22" isTestSource="false" packagePrefix="com.app" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY23" isTestSource="false" packagePrefix="com.app" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY24" isTestSource="false" packagePrefix="Com.app" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY25" isTestSource="false" packagePrefix="com.app" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY26" isTestSource="false" packagePrefix="com.app" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY27" isTestSource="false" packagePrefix="com.app" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY28" isTestSource="false" packagePrefix="com.app" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY4" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY5" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY6" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY7" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY8" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DAY9" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Package" isTestSource="false" packagePrefix="com.app" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

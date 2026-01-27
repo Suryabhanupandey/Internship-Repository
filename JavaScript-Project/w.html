@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  background: linear-gradient(135deg, #74b9ff, #a29bfe);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.app {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  color: #fff;
+  text-align: center;
+  width: 350px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+    </style>
+</head>
+<body>
+    <div class="app">
+  <h1>🌤️ Smart Weather</h1>
+  <div class="search-box">
+    <input id="cityInput" type="text" placeholder="Enter city name...">
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <div id="weatherBox" class="hidden">
+    <h2 id="cityName"></h2>
+    <h3 id="temp"></h3>
+    <p id="desc"></p>
+    <img id="icon" />
+  </div>
+
+  <p id="error" class="error hidden"></p>
+</div>
+
+<script>
+ const cityInput = document.getElementById("cityInput");
+const searchBtn = document.getElementById("searchBtn");
+const cityName = document.getElementById("cityName");
+const temp = document.getElementById("temp");
+const desc = document.getElementById("desc");
+const icon = document.getElementById("icon");
+const error = document.getElementById("error");
+const weatherBox = document.getElementById("weatherBox");
+
+async function getWeather() {
+  const city = cityInput.value.trim();
+  if (!city) return showError("Enter a city name!");
+
+  try {
+    const res = await fetch(
+  `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8aeddb731ed7b529ca6a76ba42241d55&units=metric`
+    );
+    const data = await res.json();
+
+    if (data.cod !== 200) return showError("City not found!");
+
+    updateUI(data);
+  } catch (err) {
+    showError("Network issue! Try again.");
+  }
+}
+
+function updateUI(data) {
+  error.classList.add("hidden");
+  weatherBox.classList.remove("hidden");
+
+  cityName.textContent = data.name;
+  temp.textContent = `${data.main.temp} °C`;
+  desc.textContent = data.weather[0].description;
+  icon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+}
+
+function showError(msg) {
+  error.textContent = msg;
+  error.classList.remove("hidden");
+  weatherBox.classList.add("hidden");
+}
+
+searchBtn.addEventListener("click", getWeather);
+
+</script>
+</body>
+</html>
